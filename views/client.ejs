@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Bootstrap Admin App + jQuery">
+  <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+  <title>Angle - Bootstrap Admin Template</title>
+  <!-- =============== VENDOR STYLES ===============-->
+  <!-- FONT AWESOME-->
+  <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.min.css">
+  <!-- SIMPLE LINE ICONS-->
+  <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
+  <!-- ANIMATE.CSS-->
+  <link rel="stylesheet" href="../vendor/animate.css/animate.min.css">
+  <!-- WHIRL (spinners)-->
+  <link rel="stylesheet" href="../vendor/whirl/dist/whirl.css">
+  <!-- =============== PAGE VENDOR STYLES ===============-->
+  <!-- =============== BOOTSTRAP STYLES ===============-->
+  <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
+  <!-- =============== APP STYLES ===============-->
+  <link rel="stylesheet" href="css/app.css" id="maincss">
+  <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.min.css">
+  <!-- SIMPLE LINE ICONS-->
+  <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
+  <!-- ANIMATE.CSS-->
+  <link rel="stylesheet" href="../vendor/animate.css/animate.min.css">
+  <!-- WHIRL (spinners)-->
+  <link rel="stylesheet" href="../vendor/whirl/dist/whirl.css">
+  <!-- =============== PAGE VENDOR STYLES ===============-->
+  <!-- TAGS INPUT-->
+  <link rel="stylesheet" href="../vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+  <!-- SLIDER CTRL-->
+  <link rel="stylesheet" href="../vendor/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css">
+  <!-- CHOSEN-->
+  <link rel="stylesheet" href="../vendor/chosen_v1.2.0/chosen.min.css">
+  <!-- DATETIMEPICKER-->
+  <link rel="stylesheet" href="../vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+  <!-- COLORPICKER-->
+  <link rel="stylesheet" href="../vendor/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css">
+  <!-- SELECT2-->
+  <link rel="stylesheet" href="../vendor/select2/dist/css/select2.css">
+  <link rel="stylesheet" href="../vendor/select2-bootstrap-theme/dist/select2-bootstrap.css">
+  <!-- =============== BOOTSTRAP STYLES ===============-->
+  <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
+  <!-- =============== APP STYLES ===============-->
+  <link rel="stylesheet" href="css/app.css" id="maincss">
+
+
+</head>
+
+<body>
+  <div class="content-wrapper" id="clientList">
+    <button class="btn btn-md btn-default pull-right" data-toggle="modal" data-target="#addClient">Create Client</button>
+    <h3>Clients</h3>
+    <div id="addClient" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <form method="post" action="/addClient" data-parsley-validate="" novalidate="">
+          <!-- START panel-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title text-uppercase text-center"><b>Add client</b></div>
+            </div>
+            <div class="panel-body">
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb">Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="name" required="" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb">Email Address</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="email" required="" class="form-control" data-parsley-id="5">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb-xxl">Start Date</label>
+                  <div class="col-sm-10">
+                    <div id="datetimepicker1" class="input-group date">
+                      <input type="text" name="startDate" class="form-control">
+                      <span class="input-group-addon">
+                                      <span class="fa fa-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb">Description</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="description" required="" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb">Program</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="program" required="" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb">Agent</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="agent" required="" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb">Contant Number</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="phone" required="" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb">Status</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="status" required="" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group mb">
+                  <label class="col-sm-2 control-label mb">Progress</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="progress" required="" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
+              <div class="panel-footer">
+                <div class="clearfix">
+                  <div class="pull-right">
+                    <button type="submit" class="btn btn-primary"> Add client</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END panel-->
+        </form>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <% if (!clients){%>
+          <div class="">
+
+          </div>
+          <%} else {%>
+            <% clients.forEach(function(client){ %>
+              <div class="col-md-4">
+                <div class="panel widget">
+                  <div class="panel-heading">
+                    <div class="clearfix">
+                      <div class="pull-left">
+                        <h4 class="mb-negative mt0"><%=client.name%></h4>
+                        <br>
+                        <span class="text-muted pull-left"><%=client.description%></span>
+                      </div>
+                      <div class="pull-right">
+                        <span class="status btn btn-oval btn-xs pull-right"><%=client.status%></span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="panel-body">
+                    <div class="progress progress-striped progress-xs">
+                      <div role="progressbar" aria-valuenow="<%=client.progress%>" aria-valuemin="0" aria-valuemax="100" class="progress-bar">
+                        <span class="sr-only"><%=client.progress%> Complete</span>
+                      </div>
+                    </div>
+                    <div class="list-group mb0">
+                      <a href="#" class="list-group-item">
+                  <b class="ml">Start Date</b>
+                <span class=" pl-xl "><%=client.startDate%></span>
+
+              </a>
+                      <a href="#" class="list-group-item">
+                <b class="ml" style="margin-right:7px;">Program</b>
+                 <span class="pl-xl"><%=client.program%></span>
+
+              </a>
+                      <a href="#" class="list-group-item">
+                <b class="ml" style="margin-right:25px;">Agent</b>
+                 <span class="pl-xl"><%=client.Agent%></span>
+
+              </a>
+                      <a href="#" class="list-group-item">
+                <b class="ml">Contact Info</b>
+                 <span class="pl-lg"><%=client.contactInfo.email%></span>
+                 <br>
+                 <span class="pl-xl" style="margin-left:70px;"><%=client.contactInfo.phoneNo%></span>
+              </a>
+                    </div>
+                  </div>
+                  <div class="panel-footer bg-default clearfix">
+                    <button class="btn btn-md btn-default btn-center"><strong>Manage Client</strong></button>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+                <% } %>
+      </div>
+    </div>
+  <!-- =============== VENDOR SCRIPTS ===============-->
+  <!-- MODERNIZR-->
+  <script src="../vendor/modernizr/modernizr.custom.js"></script>
+  <!-- MATCHMEDIA POLYFILL-->
+  <script src="../vendor/matchMedia/matchMedia.js"></script>
+  <!-- JQUERY-->
+  <script src="../vendor/jquery/dist/jquery.js"></script>
+  <!-- BOOTSTRAP-->
+  <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- STORAGE API-->
+  <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+  <!-- JQUERY EASING-->
+  <script src="../vendor/jquery.easing/js/jquery.easing.js"></script>
+  <!-- ANIMO-->
+  <script src="../vendor/animo.js/animo.js"></script>
+  <!-- SLIMSCROLL-->
+  <script src="../vendor/slimScroll/jquery.slimscroll.min.js"></script>
+  <!-- SCREENFULL-->
+  <script src="../vendor/screenfull/dist/screenfull.js"></script>
+  <!-- LOCALIZE-->
+  <script src="../vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+  <!-- RTL demo-->
+  <script src="js/demo/demo-rtl.js"></script>
+  <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+  <!-- FILESTYLE-->
+  <script src="../vendor/bootstrap-filestyle/src/bootstrap-filestyle.js"></script>
+  <!-- TAGS INPUT-->
+  <script src="../vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <!-- CHOSEN-->
+  <script src="../vendor/chosen_v1.2.0/chosen.jquery.min.js"></script>
+  <!-- SLIDER CTRL-->
+  <script src="../vendor/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+  <!-- INPUT MASK-->
+  <script src="../vendor/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>
+  <!-- WYSIWYG-->
+  <script src="../vendor/bootstrap-wysiwyg/bootstrap-wysiwyg.js"></script>
+  <script src="../vendor/bootstrap-wysiwyg/external/jquery.hotkeys.js"></script>
+  <!-- MOMENT JS-->
+  <script src="../vendor/moment/min/moment-with-locales.min.js"></script>
+  <!-- DATETIMEPICKER-->
+  <script type="text/javascript" src="../vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+  <!-- COLORPICKER-->
+  <script type="text/javascript" src="../vendor/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
+  <!-- Demo-->
+  <script src="js/demo/demo-forms.js"></script>
+  <!-- SELECT2-->
+  <script src="../vendor/select2/dist/js/select2.js"></script>
+
+  <!-- PARSLEY-->
+  <script src="../vendor/parsleyjs/dist/parsley.min.js"></script>
+  <!-- =============== APP SCRIPTS ===============-->
+  <script src="js/app.js"></script>
+  <script src="js/custom.js">
+  </script>
+</body>
+
+</html>
